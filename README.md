@@ -4,6 +4,10 @@
 
 Welcome to the Hotel Management System built on the Django framework!
 
+## Team Members
+Saad Hussain (21L-5178)
+Saad Hassan (21L-5252)
+
 ## Features
 
 - **Room Booking:** Effortlessly reserve rooms according to your preferences, ensuring a hassle-free booking experience.
@@ -30,9 +34,7 @@ This project is an ongoing effort to enhance the Hotel Management System continu
 
 ## Contact
 
-If you have any questions, suggestions, or just want to connect, feel free to reach out to me at [your.email@example.com].
+If you have any questions, suggestions, or just want to connect, feel free to reach out to me.
 
-Thank you for choosing our Hotel Management System. We hope you enjoy your stay!
+Thank you for choosing our Hotel Management System. We hope you enjoy!
 
-Saad Hussain (21L-5178)
-Saad Hassan (21L-5252)
