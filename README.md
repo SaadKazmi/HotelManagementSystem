@@ -31,8 +31,7 @@ Saad Hassan (21L-5252)
 
 ## Contribution
 
-This project is an ongoing effort to enhance the Hotel Management System continually. Contributions, bug reports, and feature requests are welcome! Feel free to fork the repository, make changes, and submit pull requests to help make this system even better.
-
+This project is an ongoing effort to enhance the Hotel Management System continually. Contributions, bug reports, and feature requests are welcome! 
 ## Contact
 
 If you have any questions, suggestions, or just want to connect, feel free to reach out to me.
