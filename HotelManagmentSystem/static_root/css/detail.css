@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(46, 47, 48);
+    color: rgb(236, 235, 228);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.25;
+}
+
+#brand {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    margin: 1.5rem;
+    color: #fff; /* Change brand text color to white for better visibility */
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.room-info {
+    max-width: 70%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+    transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+.room-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem; /* Adjusting heading size for better readability */
+    color: #fff; /* Changing heading text color to white */
+}
+
+.room-info p {
+    margin: 0.75rem 0; /* Adjusting paragraph margin for better spacing */
+    color: #ccc; /* Changing paragraph text color */
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #6c5ce7; /* Changing link color on hover */
+}

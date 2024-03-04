@@ -1,0 +1,72 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: lightblue;
+    color: #333;
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+h1 {
+    text-align: center; /* Align the heading text to the center */
+    margin-bottom: 20px; /* Add some space below the heading */
+}
+
+
+.billing-container {
+   justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+
+form {
+    width: 70%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.payment-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c5ce7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.payment-btn:hover {
+    background-color: #4b3cb0;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+

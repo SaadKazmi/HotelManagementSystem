@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <!-- Meta tags, title, and stylesheets -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{% static 'login-styles.css' %}">
+    <!-- Other styles and meta tags -->
+    <title>Login</title>
+</head>
+<body>
+    <div class ="wrapper">
+        <form method="post">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <div class="input_box">
+                <input type="text" name="email" placeholder="Email" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input_box">
+                <input type="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember_me">
+                <label><input type="checkbox" name="remember">Remember me</label>
+                <a href = "password_reset">Forget Password?</a> 
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register_link">
+                <p>Not a Registered Guest?<a href="{% url 'register' %}">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

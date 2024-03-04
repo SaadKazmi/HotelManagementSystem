@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="{% static 'booking-styles.css' %}">
+</head>
+
+<body>
+
+    <h1 id="brand">Room Selection</h1>
+
+    <div class="content">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for room_type in room_types %}
+            <div class="room">
+                <a href="{% url 'detail' room_type.room_type %}" name="RoomType">
+                    <img src="{{ room_type.room_image }}" alt="{{ room_type.room_type }}">
+                    <!-- Use room_type.room_image directly as the image URL -->
+                    <h2>{{ room_type.room_type }}</h2>
+                    <p>{{ room_type.room_desc }}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </form>
+    </div>
+
+</body>
+
+</html>

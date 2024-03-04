@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Room - {{ selected_room_type }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .available-rooms {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td:last-child {
+            text-align: center;
+        }
+
+        input[type="date"] {
+            padding: 6px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        td[colspan="6"] {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Book Room - {{ selected_room_type }}</h1>
+
+    <div class="available-rooms">
+        <h2>Available {{ selected_room_type }} Rooms</h2>
+        <!-- Display details of available rooms for the selected room type -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Room Number</th>
+                    <th>Occupancy</th>
+                    <th>Status</th>
+                    <th>Check-In Date</th>
+                    <th>Check-Out Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for room in available_rooms %}
+                <tr>
+                    <td>{{ room.room_number }}</td>
+                    <td>{{ room.occupancy }}</td>
+                    <td>{{ room.room_status }}</td>
+                    <td>
+                        <form action="{% url 'confirm_booking' %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="room_number" value="{{ room.room_number }}">
+                            <input type="hidden" name="room_type" value="{{ selected_room_type }}">
+                            <input type="date" name="check_in_date" required>
+                    </td>
+                    <td>
+                            <input type="date" name="check_out_date" required>
+                    </td>
+                    <td>
+                            {% if room.room_status != 'booked' %}
+                            <button type="submit">Book Now</button>
+                            {% endif %}
+                        </form>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">No available rooms for this room type.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Additional content or scripts can be added here -->
+
+</body>
+
+</html>

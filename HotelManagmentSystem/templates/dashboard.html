@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Dashboard</title>
+
+  <style>
+    /* Basic reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      .container {
+        display: flex;
+        height: 100vh;
+      }
+      
+      .sidebar {
+        width: 250px;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      .sidebar h2 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+      
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .sidebar ul li {
+        margin-bottom: 10px;
+      }
+      
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        padding: 8px 16px;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .sidebar ul li a:hover {
+        background-color: #45a049;
+      }
+      
+      .main-content {
+        flex: 1;
+        padding: 20px;
+      }
+      
+      header {
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+      header h1 {
+        margin-bottom: 10px;
+        font-size: 2em;
+      }
+      
+      /* Additional styling as needed */
+  
+      
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="{% url 'booking' %}">Make Booking</a></li>
+        <li><a href="">View Booking</a></li>
+        <li><a href="{% url 'contact_us' %}">Cancel Booking</a></li>
+        <li><a href="{% url 'profileChange' %}">Edit Profile</a></li>
+        <li><a href="{% url 'passwordChange' %}">Change Password</a></li>
+        <li><a href="{% url 'logoutview' %}">Logout</a></li>
+     
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+          <h1>Welcome, Guest!</h1>
+      </header>
+  
+      <!-- Content sections will appear here dynamically -->
+      {% if bookings %}
+        <h2>Your Bookings</h2>
+        <ul>
+            {% for booking in bookings %}
+                <li>
+                    Booking ID: {{ booking.id }}, 
+                    Room Number: {{ booking.room.room_number }}, 
+                    Check-in: {{ booking.check_in_date }}, 
+                    Check-out: {{ booking.check_out_date }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No bookings found for you.</p>
+    {% endif %}
+      <!-- Additional content or sections can be added here -->
+  </main>
+  </div>
+
+</body>
+
+</html>

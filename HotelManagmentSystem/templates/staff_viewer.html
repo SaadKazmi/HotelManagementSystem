@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    header h1 {
+      margin: 0;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    .staffMember {
+      background-color: white;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .staffMember h2 {
+      margin-top: 0;
+    }
+    
+    .staffMember p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Staff Details</h1>
+  </header>
+  <main id="staffList">
+    {% for staff_member in all_staff %}
+      <div class="staffMember">
+        <h2>Name: {{ staff_member.first_name }} {{ staff_member.last_name }}</h2>
+        <p>ID: {{ staff_member.staff_id }}</p>
+        <p>Designation: {{ staff_member.role }}</p>
+        <p>Gender: {{ staff_member.gender }}</p>
+        <p>Contact No: {{ staff_member.contact_no }}</p>
+      </div>
+    {% empty %}
+      <p>No staff members available.</p>
+    {% endfor %}
+  </main>
+</body>
+</html>

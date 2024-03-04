@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="{% static 'homePage-styles.css' %}">
+       <title>Hotel Management System</title>
+
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+              <!-- <div class="logo"><a href="#">NAME</a></div>-->
+               <ul class="links">
+                  <li><a href="">HOME </a></li>
+                  <li><a href="{% url 'about' %}">ABOUT </a></li>
+                 <li><a href="{% url 'contact_us' %}">CONTACT</a></li>
+                 <li><a href="{% url 'Staff_Viewer' %}">STAFF VIEW</a></li>
+                </ul>
+                <a href="{% url 'login' %}" class="action_btn">LOGIN</a>
+                <div class="toggle_btn">
+                 <i class="fa-solid fa-bars"></i>
+                </div>            
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="">HOME </a></li>
+                <li><a href="{% url 'about' %}">ABOUT </a></li>
+               <li><a href="{% url 'contact_us' %}">CONTACT</a></li>                
+                <li><a href="{% url 'login' %}" class="action_btn">LOGIN</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p class="welcome-message">
+                    Welcome to seamless luxury: where every stay becomes an unforgettable experience.
+                </p>
+                <a href="{% url 'register' %}" class="action_btn">Book a Room</a>
+            </section>
+        </main>
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn');
+            const toggleBtnIcon = document.querySelector('.toggle_btn i');
+            const dropDownMenu = document.querySelector('.dropdown_menu');
+
+            toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+            };
+        </script>
+
+    
+    </body>
+</html>

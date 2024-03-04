@@ -1,0 +1,94 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: lightblue; /* Soft light grey for the background */
+    color: #333; /* Darker text for better readability */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Brand styles */
+#brand {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.5rem;
+    margin: 1.5rem;
+    color: #444; /* Darker color for brand text */
+}
+
+/* Content layout styles */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Room card styles */
+.room {
+    width: calc(100% - 20px); /* Adjusted width calculation */
+    max-width: 300px;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 10px; /* Adjusted margin */
+    background-color: #fafafa; /* Light grey background for rooms */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .room {
+        width: calc(50% - 20px); /* Adjusted width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        width: calc(100% - 20px); /* Adjusted width for mobile screens */
+    }
+}
+.room:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+}
+
+/* Heading styles */
+h2 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+    color: #333; /* Slightly darker heading color */
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 1rem;
+    color: #ffffff; /* Darker color for better readability */
+}
+
+/* Anchor (link) styles */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #6c5ce7; /* A more vibrant and appealing color for links */
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #4b3cb0; /* Darker shade on hover */
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+}

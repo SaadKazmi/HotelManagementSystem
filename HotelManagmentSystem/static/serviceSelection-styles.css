@@ -1,0 +1,119 @@
+/* Reset default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    
+    background-color: lightblue; /* Soft light grey for the background */
+    color: #333; /* Darker text for better readability */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Brand styles */
+#brand {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.5rem;
+    margin: 1.5rem;
+    color: #444; /* Darker color for brand text */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Service card styles */
+.service {
+    width: calc(30% - 20px);
+    max-width: 300px;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    background-color: #fafafa; /* Light grey background for rooms */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.service:hover {
+    background-color: #f0f0f0;
+}
+
+/* Heading styles */
+h2 {
+    margin: 0.5rem 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Anchor (link) styles */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #6c5ce7;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: auto; /* Push the anchor to the bottom */
+}
+
+a:hover {
+    background-color: #4b3cb0;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: 240px;
+    margin-bottom: 1rem;
+    margin-top: 1rem; /* Add space below the image */
+}
+
+input[type="checkbox"] {
+    /* Increase the size of the checkbox */
+    transform: scale(2); /* Change the scale factor as needed */
+    margin-right: 9px; /* Adjust spacing between checkbox and label */
+}
+
+
+.billing-button {
+    position: relative;
+    float: right;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+
+
+/* Style for the billing button */
+.billing-btn {
+    padding: 10px 20px;
+    background-color: #6c5ce7;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.billing-btn:hover {
+    background-color: #4b3cb0;
+}
+
+/* ... remaining CSS code ... */

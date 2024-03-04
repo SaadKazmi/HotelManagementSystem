@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue; /* Soft light grey for the background */
+    color: #333; /* Darker text for better readability */
+    font-family: sans-serif;
+    line-height: 1.25;
+}
+
+#brand {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    margin: 1.5rem;
+    color: #444; /* Darker color for brand text */
+}
+
+.room-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.room-info {
+    max-width: 70%;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #6c5ce7; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+}
+
+.room-info h3 {
+    margin: 0.25rem;
+    color: #333; /* Slightly darker heading color */
+}
+
+.room-info p {
+    margin: 0.5rem 0;
+    color: black; /* Darker color for better readability */
+    
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.3rem;
+    background-color: #6c5ce7; /* A more vibrant and appealing color for links */
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #3d347c; /* Darker shade on hover */
+}

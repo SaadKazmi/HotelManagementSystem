@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Hotel Management System</title>
+    <link rel="stylesheet" href="{% static 'aboutUs-styles.css' %}">
+  
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="" class="active">About</a></li>
+                <li><a href="{% url 'contact_us' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <h1>About Our Hotel Management System</h1>
+                <p>Welcome to our Hotel Management System! We strive to provide a seamless and delightful experience for both our guests and staff.</p>
+                <p>Our system is designed to efficiently handle reservations, manage room inventory, streamline check-ins and check-outs, and ensure a top-notch experience for every guest.</p>
+                <p>With advanced features and user-friendly interfaces, we aim to elevate the hospitality experience and empower hotel management operations.</p>
+            </div>
+            <div class="about-image">
+                <!-- Add an image related to your hotel management system -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTphu7cGCBfmVvtxkk7mbOdIe8kY0Ak1dZzKE0Qe_SnTQ&s" >
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Hotel Management System. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

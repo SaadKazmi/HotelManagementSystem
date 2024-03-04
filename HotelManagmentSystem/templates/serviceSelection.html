@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Selection</title>
+    <link rel="stylesheet" href="{% static 'booking-styles.css' %}">
+</head>
+
+<body>
+
+    <h1 id="brand">Services Offered</h1>
+
+    <div class="content">
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for service in services %}
+            <div class="service">
+                <img src="{{ service.service_image }}" alt="{{ service.service_name }}">
+                <h2>{{ service.service_name }}</h2>
+                <p>{{ service.description }}</p>
+                <p>Price: ${{ service.service_price }}</p>
+                <label>
+                    <input type="checkbox" name="selected_services" value="{{ service.pk }}">
+                    Select Service
+                </label>
+            </div>
+            {% endfor %}
+            <button type="submit" class="book-service-btn">Book Selected Services</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
