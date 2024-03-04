@@ -6,6 +6,7 @@ Welcome to the Hotel Management System built on the Django framework!
 
 ## Team Members
 Saad Hussain (21L-5178)
+
 Saad Hassan (21L-5252)
 
 ## Features
